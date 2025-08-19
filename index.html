@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Toolbox - All-in-One Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🧰</span>
+                <span class="logo-text">Modern Toolbox</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="hero-section">
+            <h1 class="hero-title">Your All-in-One Digital Toolbox</h1>
+            <p class="hero-subtitle">Free, fast, and secure tools for everyday tasks</p>
+        </div>
+
+        <div class="controls-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search tools..." class="search-input">
+                <span class="search-icon">🔍</span>
+                <button id="clearSearch" class="clear-search-btn" onclick="clearSearch()" style="display: none;">✕</button>
+            </div>
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">All Tools</button>
+                <button class="category-btn" data-category="productivity">Productivity</button>
+                <button class="category-btn" data-category="text">Text</button>
+                <button class="category-btn" data-category="security">Security</button>
+                <button class="category-btn" data-category="design">Design</button>
+            </div>
+        </div>
+
+        <div class="tools-grid" id="toolsGrid">
+            <!-- Tools will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <button id="closeModal" class="close-btn">&times;</button>
+            </div>
+            <div id="modalBody" class="modal-body">
+                <!-- Tool content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="tools.js"></script>
+    <script src="node_modules/qrious/dist/qrious.min.js"></script>
+</body>
+</html>
